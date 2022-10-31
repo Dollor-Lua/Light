@@ -1,0 +1,35 @@
+var         : TYPE IDENTIFIER EQ expression
+            : expression
+
+expression  : expression [[COMPARISON] expression]+
+            : term [PLUS/MINUS term]
+
+term        : factor [MUL/DIV factor]
+
+factor      : call
+
+call        : value [LPAREN [expression [, expression]+] RPAREN]
+
+value       : NUMBER/IDENTIFIER
+            : LPAREN expression RPAREN
+            : if-expr
+            : while-expr
+            : func-def
+
+if-expr     : KEYWORD:if expression {
+                    [expression]+
+                } [KEYWORD:elseif expression {
+                    [expression]+
+                }]+ [KEYWORD:else {
+                    [expression]+
+                }]
+
+TODO: add do while
+while-expr  : KEYWORD:while expression {
+                    [expression]+
+                }
+            : KEYWORD:do {
+                    [expression]+
+                } while expression
+
+func-def    : KEYWORD:func IDENTIFIER? LPAREN [IDENTIFIER [, IDENTIFIER]+] RPAREN

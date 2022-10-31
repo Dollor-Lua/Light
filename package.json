@@ -1,0 +1,11 @@
+{
+    "name": "light",
+    "displayName": "Light",
+    "version": "1.0.0",
+    "description": "Simple JS lang",
+    "main": "src/main.js",
+    "author": "Fynotix",
+    "license": "MIT",
+    "private": false,
+    "type": "module"
+}

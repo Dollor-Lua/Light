@@ -1,0 +1,24 @@
+Documentation:
+    - AST.js
+    - compiler.js
+    - parser.js
+
+todo:
+    - Error Handling
+    - For loops
+    - STDIN
+    - DLL Loading
+    - File Loading
+    - Macros
+    - Classes
+    - Namespaces
+    - extern ASM
+    - Type Checking
+
+libs:
+    - Standard Library
+
+etc:
+    - Templates
+
+TODO: Redo DUMPF, FLOATS
